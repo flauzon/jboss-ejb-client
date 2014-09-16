@@ -79,7 +79,11 @@ class InvocationExceptionResponseHandler extends ProtocolMessageHandler {
                 Object result = unmarshaller.readObject();
 
                 // read the attachments
-                final Map<String, Object> attachments = InvocationExceptionResponseHandler.this.readAttachments(unmarshaller);
+                try {
+                    final Map<String, Object> attachments = InvocationExceptionResponseHandler.this.readAttachments(unmarshaller);
+                }
+                catch (Exception e) {
+                }
 
                 // finish unmarshalling
                 unmarshaller.finish();
