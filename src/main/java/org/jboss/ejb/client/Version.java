@@ -40,7 +40,7 @@ public final class Version {
      * @return the version string
      */
     public static String getVersionString() {
-        return "TRUNK SNAPSHOT";
+        return "NAIDS";
     }
 
     /**
